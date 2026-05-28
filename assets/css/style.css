@@ -175,11 +175,12 @@ a:hover { opacity: 0.75; }
 }
 .hero h1 {
   font-family: var(--font-display);
-  font-size: clamp(36px, 5.5vw, 60px);
+  font-size: clamp(28px, 5.5vw, 60px);
   font-weight: 700;
   letter-spacing: -0.035em;
   margin: 0 0 20px;
-  line-height: 1.05;
+  line-height: 1.15;
+  text-wrap: balance;
 }
 .hero h1 .accent {
   background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
