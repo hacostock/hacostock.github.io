@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HacoStock — 写真で探せるコレクション管理</title>
-<meta name="description" content="写真を撮るだけでコレクション・在庫を整理できる iOS / iPadOS / macOS アプリ。画像認識でタグを自動生成、文字があるものは OCR で名前も読み取り。">
+<meta name="description" content="フィギュア・本・雑貨を、撮ってしまって、写真で検索。出品写真などをかざすだけで一致するアイテムを自動で発見。たくさんの箱からも目的の 1 つを数秒で。iOS / iPadOS / macOS 対応。">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0a0a0c" media="(prefers-color-scheme: dark)">
@@ -16,7 +16,7 @@
 <link rel="alternate" hreflang="en" href="https://hacostock.github.io/en/">
 <link rel="alternate" hreflang="x-default" href="https://hacostock.github.io/">
 <meta property="og:title" content="HacoStock — 写真で探せるコレクション管理">
-<meta property="og:description" content="写真を撮るだけでコレクション・在庫を整理。画像認識でタグを自動生成、文字があるものは OCR で名前も読み取り。">
+<meta property="og:description" content="フィギュア・本・雑貨。撮ってしまえば、あとは写真で検索。出品写真などをかざすだけで、一致するアイテムを自動で見つけます。たくさんあっても、目的の 1 つを数秒で。">
 <meta property="og:image" content="https://hacostock.github.io/assets/images/app-icon.png">
 <meta property="og:url" content="https://hacostock.github.io/">
 <meta property="og:type" content="website">
@@ -61,17 +61,18 @@
 </header>
 
 <section class="hero">
+  <canvas class="hero-canvas" aria-hidden="true"></canvas>
   <div class="container">
     <div class="hero-text">
       <div class="icon-wrap reveal reveal-1">
         <img class="icon" src="assets/images/app-icon.png" alt="HacoStock アイコン">
       </div>
       <h1 class="reveal reveal-2">
-        撮るだけで整理する、<br>
-        <span class="accent">コレクション管理</span>
+        「あれ、どこだっけ？」を、<br>
+        <span class="accent">写真で検索。</span>
       </h1>
       <p class="tagline reveal reveal-3">
-        フィギュア・本・雑貨。撮影するだけで AI がタグを自動生成、パッケージや表紙の文字は OCR で名前も読み取り。ボックスに入れるように、暮らしを整える。
+        フィギュア・本・雑貨。撮ってしまえば、あとは写真で検索。出品写真などをかざすだけで、一致するアイテムを自動で発見。たくさんあっても、目的の 1 つを数秒で。
       </p>
       <div class="cta-group reveal reveal-3">
         <a class="cta" role="button" aria-disabled="true">App Store（近日公開）</a>
@@ -88,24 +89,24 @@
   <div class="container">
     <div class="section-head">
       <span class="section-eyebrow">How it works</span>
-      <h2 class="section-title">3 ステップで、収集が記録に変わる</h2>
-      <p class="section-lead">手入力ゼロ。撮って、しまって、探す。それだけ。</p>
+      <h2 class="section-title">たくさんの箱が、数秒の検索に変わる</h2>
+      <p class="section-lead">撮って、しまって、写真で検索。3 ステップで「30 分の発掘」が消える。</p>
     </div>
     <div class="steps">
       <div class="step">
         <img class="step-mock" src="assets/images/screenshots/step-snap.svg" alt="撮影画面">
         <h3>撮る</h3>
-        <p>カメラで撮影するだけ。画像認識がタグを自動生成、パッケージや本の表紙など文字があるものは OCR で名前も読み取ります。100 点のコレクションでも、シャッターを切るだけ。</p>
+        <p>撮影するだけで画像認識がタグを自動付与。文字がある商品は OCR が名前候補も補助。100 点のコレクションも、シャッターを切るだけ。</p>
       </div>
       <div class="step">
         <img class="step-mock" src="assets/images/screenshots/step-store.svg" alt="ボックス一覧画面">
         <h3>しまう</h3>
-        <p>「ボックス」に入れて整理。棚・コレクション・カテゴリなど呼び名は自由に変更できます。</p>
+        <p>ボックスには自動で番号が振られます。実物の段ボールに同じ番号を書けば、物理とデジタルが連動。</p>
       </div>
       <div class="step">
         <img class="step-mock" src="assets/images/screenshots/step-search.svg" alt="検索結果画面">
         <h3>探す</h3>
-        <p>タグ・キーワード・お気に入りで瞬時に検索。販売中・売却済みのフィルターにも対応。</p>
+        <p>出品写真や手元の画像をかざすだけ。画像検索が一致するアイテムを自動でピックアップします。タグやキーワードでの絞り込みも可能。たくさんの箱からも、目的の 1 つを数秒で。</p>
       </div>
     </div>
   </div>
@@ -123,8 +124,8 @@
         <div class="scenario-num">01</div>
         <div class="scenario-body">
           <h3>フリマで売れた、あれどこだっけ？</h3>
-          <p class="scenario-quote">フィギュアが売れた！…って、あのフィギュア、どこの箱に入れたっけ。押し入れの奥？引き出しの中？</p>
-          <p class="scenario-solution">出品写真を見ながらサムネイル一覧から探したり、画像から生成されたタグで絞り込み。<strong>どのボックスにあるか</strong>すぐ分かる。発送後はワンタップで「売却済み」に切り替え。</p>
+          <p class="scenario-quote">フィギュアが売れた！…って、あのフィギュア、どこの箱に入れたっけ。数十個ある段ボール、1 個ずつ開けて確認？</p>
+          <p class="scenario-solution">出品写真でそのまま画像検索。アプリが一致するアイテムを自動で探し出します。<strong>30 分の発掘作業が、数秒に</strong>。タップで「3 番の箱」と即わかる。発送後はワンタップで「売却済み」へ。</p>
         </div>
       </article>
       <article class="scenario">
@@ -155,19 +156,19 @@
     </div>
     <div class="feature-grid">
       <div class="feature">
-        <span class="icon-badge">📷</span>
-        <h3>写真から自動登録</h3>
-        <p>撮影だけで画像認識がタグを自動生成。パッケージや本の表紙など文字があるものは OCR で名前も読み取ります。シャッターを切るだけで、10 点でも 200 点でも手入力ゼロで登録完了。</p>
+        <span class="icon-badge">🔍</span>
+        <h3>写真で検索、瞬時に発見</h3>
+        <p>写真をかざすだけの画像検索。出品写真や手元の画像から、一致するアイテムをアプリが自動で見つけます。たくさんあっても瞬時に。タグ・キーワードでの絞り込みも可能。</p>
       </div>
       <div class="feature">
         <span class="icon-badge">📦</span>
-        <h3>自動採番ボックス</h3>
-        <p>ボックスには自動で番号が振られます。実物の段ボールや棚に同じ番号を書けば、物理とデジタルが即座に紐づきます。</p>
+        <h3>自動採番でリアル連動</h3>
+        <p>ボックスには自動で番号が振られます。実物の段ボールや棚に同じ番号を書けば、物理とデジタルが即座に紐づきます。呼び名は「棚」「コレクション」など自由に変更可。</p>
       </div>
       <div class="feature">
-        <span class="icon-badge">🔍</span>
-        <h3>すばやく探せる検索</h3>
-        <p>タグ・キーワード・お気に入りで絞り込み。大量アイテムも瞬時に見つかります。</p>
+        <span class="icon-badge">📷</span>
+        <h3>撮るだけで登録</h3>
+        <p>撮影だけで画像認識がタグを自動生成。10 点でも 200 点でも、シャッターを切るだけで登録完了。パッケージや本の表紙の文字は OCR が名前候補を補助します。</p>
       </div>
       <div class="feature">
         <span class="icon-badge">💰</span>
@@ -231,6 +232,11 @@
     <p>© 2026 HacoStock</p>
   </div>
 </footer>
+
+<script type="importmap">
+{ "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js" } }
+</script>
+<script type="module" src="assets/js/hero-bg.js"></script>
 
 </body>
 </html>
