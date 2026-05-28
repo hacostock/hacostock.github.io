@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HacoStock — 写真で探せるコレクション管理</title>
-<meta name="description" content="写真を撮るだけでコレクション・在庫を整理できる iOS / iPadOS / macOS アプリ。OCR で名前を自動入力、画像からタグを自動生成。">
+<meta name="description" content="写真を撮るだけでコレクション・在庫を整理できる iOS / iPadOS / macOS アプリ。画像認識でタグを自動生成、文字があるものは OCR で名前も読み取り。">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0a0a0c" media="(prefers-color-scheme: dark)">
@@ -16,7 +16,7 @@
 <link rel="alternate" hreflang="en" href="https://hacostock.github.io/en/">
 <link rel="alternate" hreflang="x-default" href="https://hacostock.github.io/">
 <meta property="og:title" content="HacoStock — 写真で探せるコレクション管理">
-<meta property="og:description" content="写真を撮るだけでコレクション・在庫を整理。OCR が名前を自動入力、画像からタグを自動生成。">
+<meta property="og:description" content="写真を撮るだけでコレクション・在庫を整理。画像認識でタグを自動生成、文字があるものは OCR で名前も読み取り。">
 <meta property="og:image" content="https://hacostock.github.io/assets/images/app-icon.png">
 <meta property="og:url" content="https://hacostock.github.io/">
 <meta property="og:type" content="website">
@@ -71,7 +71,7 @@
         <span class="accent">コレクション管理</span>
       </h1>
       <p class="tagline reveal reveal-3">
-        フィギュア・本・雑貨。カメラに収めるだけで、OCR が名前を読み取り、AI がタグを生成。ボックスに入れるように、暮らしを整える。
+        フィギュア・本・雑貨。撮影するだけで AI がタグを自動生成、パッケージや表紙の文字は OCR で名前も読み取り。ボックスに入れるように、暮らしを整える。
       </p>
       <div class="cta-group reveal reveal-3">
         <a class="cta" role="button" aria-disabled="true">App Store（近日公開）</a>
@@ -95,7 +95,7 @@
       <div class="step">
         <img class="step-mock" src="assets/images/screenshots/step-snap.svg" alt="撮影画面">
         <h3>撮る</h3>
-        <p>カメラで撮影するだけ。OCR が名前を自動で読み取り、画像からタグを生成します。</p>
+        <p>カメラで撮影するだけ。画像認識がタグを自動生成、パッケージや本の表紙など文字があるものは OCR で名前も読み取ります。100 点のコレクションでも、シャッターを切るだけ。</p>
       </div>
       <div class="step">
         <img class="step-mock" src="assets/images/screenshots/step-store.svg" alt="ボックス一覧画面">
@@ -123,7 +123,7 @@
         <div class="scenario-num">01</div>
         <div class="scenario-body">
           <h3>フリマで売れた、あれどこだっけ？</h3>
-          <p class="scenario-quote">フィギュアが売れた！…って、あの箱、どこに入れたっけ。押し入れの奥？引き出しの中？</p>
+          <p class="scenario-quote">フィギュアが売れた！…って、あのフィギュア、どこの箱に入れたっけ。押し入れの奥？引き出しの中？</p>
           <p class="scenario-solution">出品写真を見ながらサムネイル一覧から探したり、画像から生成されたタグで絞り込み。<strong>どのボックスにあるか</strong>すぐ分かる。発送後はワンタップで「売却済み」に切り替え。</p>
         </div>
       </article>
@@ -138,9 +138,9 @@
       <article class="scenario">
         <div class="scenario-num">03</div>
         <div class="scenario-body">
-          <h3>引越し前、何をどこに詰めた？</h3>
-          <p class="scenario-quote">段ボールにまとめて入れた。けど、後から「あの本どこ？」となるのが目に見えてる。</p>
-          <p class="scenario-solution">ボックスごとにまとめて撮影しておけば、<strong>箱を開けずに中身が分かる</strong>。引越し後の発掘作業ゼロ。</p>
+          <h3>段ボールの中身、開けずに分かる</h3>
+          <p class="scenario-quote">物置や倉庫に積んだ段ボール。マジックで「本」「雑貨」と書いただけじゃ、結局開けて確認することに。</p>
+          <p class="scenario-solution">アプリのボックスには<strong>自動で番号が振られる</strong>。同じ番号を実物の段ボールに書くだけで、物理とデジタルが一発で紐づく。「3 番の箱」と開けばアプリで中身が分かる。引越し・倉庫・トランクルーム管理に。</p>
         </div>
       </article>
     </div>
@@ -157,12 +157,12 @@
       <div class="feature">
         <span class="icon-badge">📷</span>
         <h3>写真から自動登録</h3>
-        <p>撮影だけで名前を OCR、タグを画像認識で自動生成。手入力ゼロで登録できます。</p>
+        <p>撮影だけで画像認識がタグを自動生成。パッケージや本の表紙など文字があるものは OCR で名前も読み取ります。シャッターを切るだけで、10 点でも 200 点でも手入力ゼロで登録完了。</p>
       </div>
       <div class="feature">
         <span class="icon-badge">📦</span>
-        <h3>ボックスで整理</h3>
-        <p>「棚」「コレクション」「カテゴリ」など、自分のスタイルに合わせて呼び方を変えられます。</p>
+        <h3>自動採番ボックス</h3>
+        <p>ボックスには自動で番号が振られます。実物の段ボールや棚に同じ番号を書けば、物理とデジタルが即座に紐づきます。</p>
       </div>
       <div class="feature">
         <span class="icon-badge">🔍</span>
