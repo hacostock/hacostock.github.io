@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 680" fill="none" role="img" aria-label="Search results screen placeholder">
+  <defs>
+    <linearGradient id="bezel-c" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a2a2c"/>
+      <stop offset="1" stop-color="#0e0e10"/>
+    </linearGradient>
+    <linearGradient id="screen-c" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#16161a"/>
+      <stop offset="1" stop-color="#0d0d10"/>
+    </linearGradient>
+    <linearGradient id="accent-c" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff8a5f"/>
+      <stop offset="1" stop-color="#ffb088"/>
+    </linearGradient>
+    <linearGradient id="result-a" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2a2026"/>
+      <stop offset="1" stop-color="#1a1418"/>
+    </linearGradient>
+    <linearGradient id="result-b" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1d2a30"/>
+      <stop offset="1" stop-color="#13191d"/>
+    </linearGradient>
+    <linearGradient id="result-c" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2a2820"/>
+      <stop offset="1" stop-color="#1a1812"/>
+    </linearGradient>
+    <linearGradient id="result-d" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#231d2a"/>
+      <stop offset="1" stop-color="#16121c"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="320" height="680" rx="44" fill="url(#bezel-c)"/>
+  <rect x="3" y="3" width="314" height="674" rx="41" fill="none" stroke="rgba(255,255,255,0.06)"/>
+  <rect x="10" y="10" width="300" height="660" rx="36" fill="url(#screen-c)"/>
+
+  <rect x="130" y="22" width="60" height="20" rx="10" fill="#000"/>
+  <text x="32" y="36" fill="#f5f5f7" font-family="-apple-system, sans-serif" font-size="11" font-weight="600">9:41</text>
+
+  <!-- Search bar -->
+  <g transform="translate(24,72)">
+    <rect width="272" height="44" rx="22" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.08)" stroke-width="0.6"/>
+    <circle cx="22" cy="22" r="5.5" stroke="#86868b" stroke-width="1.4" fill="none"/>
+    <line x1="26" y1="26" x2="30" y2="30" stroke="#86868b" stroke-width="1.4" stroke-linecap="round"/>
+    <text x="42" y="27" fill="#f5f5f7" font-family="-apple-system, sans-serif" font-size="13" font-weight="500">ガンプラ</text>
+    <line x1="84" y1="14" x2="84" y2="30" stroke="#ff8a5f" stroke-width="1.4">
+      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+    </line>
+    <!-- cancel -->
+    <text x="252" y="27" fill="#ff8a5f" font-family="-apple-system, sans-serif" font-size="12" font-weight="500">キャンセル</text>
+  </g>
+
+  <!-- Tag chips -->
+  <text x="28" y="148" fill="#86868b" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" letter-spacing="0.5">タグで絞り込み</text>
+  <g transform="translate(24,160)">
+    <rect width="56" height="28" rx="14" fill="url(#accent-c)"/>
+    <text x="28" y="18" text-anchor="middle" fill="#fff" font-family="-apple-system, sans-serif" font-size="11" font-weight="600">HG</text>
+    <rect x="62" width="62" height="28" rx="14" fill="url(#accent-c)" opacity="0.92"/>
+    <text x="93" y="18" text-anchor="middle" fill="#fff" font-family="-apple-system, sans-serif" font-size="11" font-weight="600">未組立</text>
+    <rect x="130" width="56" height="28" rx="14" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.08)" stroke-width="0.5"/>
+    <text x="158" y="18" text-anchor="middle" fill="#a1a1a6" font-family="-apple-system, sans-serif" font-size="11" font-weight="500">塗装済</text>
+    <rect x="192" width="80" height="28" rx="14" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.08)" stroke-width="0.5"/>
+    <text x="232" y="18" text-anchor="middle" fill="#a1a1a6" font-family="-apple-system, sans-serif" font-size="11" font-weight="500">お気に入り</text>
+  </g>
+
+  <!-- Result count -->
+  <text x="28" y="220" fill="#86868b" font-family="-apple-system, sans-serif" font-size="11" font-weight="500">12 件の結果</text>
+
+  <!-- Result grid -->
+  <g>
+    <rect x="24" y="232" width="132" height="132" rx="16" fill="url(#result-a)"/>
+    <path d="M 90,278 L 78,300 L 102,300 Z" fill="rgba(255,255,255,0.08)"/>
+    <circle cx="90" cy="270" r="10" fill="rgba(255,255,255,0.08)"/>
+    <rect x="36" y="334" width="60" height="6" rx="3" fill="rgba(255,255,255,0.22)"/>
+    <rect x="36" y="346" width="40" height="5" rx="2.5" fill="rgba(255,255,255,0.10)"/>
+    <!-- highlight ring -->
+    <rect x="22" y="230" width="136" height="136" rx="18" stroke="#ff8a5f" stroke-width="1.5" fill="none" opacity="0.6"/>
+
+    <rect x="164" y="232" width="132" height="132" rx="16" fill="url(#result-b)"/>
+    <rect x="190" y="262" width="80" height="60" rx="6" fill="rgba(255,255,255,0.06)"/>
+    <rect x="176" y="334" width="70" height="6" rx="3" fill="rgba(255,255,255,0.22)"/>
+    <rect x="176" y="346" width="48" height="5" rx="2.5" fill="rgba(255,255,255,0.10)"/>
+  </g>
+  <g>
+    <rect x="24" y="374" width="132" height="132" rx="16" fill="url(#result-c)"/>
+    <circle cx="90" cy="424" r="22" fill="rgba(255,255,255,0.06)"/>
+    <rect x="36" y="476" width="56" height="6" rx="3" fill="rgba(255,255,255,0.22)"/>
+    <rect x="36" y="488" width="36" height="5" rx="2.5" fill="rgba(255,255,255,0.10)"/>
+
+    <rect x="164" y="374" width="132" height="132" rx="16" fill="url(#result-d)"/>
+    <rect x="190" y="404" width="80" height="60" rx="6" fill="rgba(255,255,255,0.06)"/>
+    <rect x="176" y="476" width="64" height="6" rx="3" fill="rgba(255,255,255,0.22)"/>
+    <rect x="176" y="488" width="44" height="5" rx="2.5" fill="rgba(255,255,255,0.10)"/>
+    <!-- sold badge -->
+    <rect x="170" y="380" width="50" height="16" rx="8" fill="rgba(255,255,255,0.12)"/>
+    <text x="195" y="391" text-anchor="middle" fill="#f5f5f7" font-family="-apple-system, sans-serif" font-size="9" font-weight="600">売却済</text>
+  </g>
+  <g>
+    <rect x="24" y="516" width="132" height="86" rx="16" fill="url(#result-a)" opacity="0.7"/>
+    <rect x="164" y="516" width="132" height="86" rx="16" fill="url(#result-b)" opacity="0.7"/>
+  </g>
+
+  <!-- bottom fade -->
+  <rect x="10" y="600" width="300" height="70" fill="url(#screen-c)" opacity="0.95"/>
+  <line x1="10" y1="620" x2="310" y2="620" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/>
+  <g transform="translate(266,640)" fill="url(#accent-c)">
+    <circle cx="-1" cy="-1" r="6"/>
+  </g>
+</svg>

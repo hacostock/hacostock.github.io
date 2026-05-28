@@ -5,15 +5,41 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HacoStock — 写真で探せるコレクション管理</title>
 <meta name="description" content="写真を撮るだけでコレクション・在庫を整理できる iOS / iPadOS / macOS アプリ。OCR で名前を自動入力、画像からタグを自動生成。">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0a0a0c" media="(prefers-color-scheme: dark)">
 <link rel="icon" type="image/png" href="assets/images/app-icon.png">
 <link rel="apple-touch-icon" href="assets/images/app-icon.png">
 <link rel="stylesheet" href="assets/css/style.css">
+<link rel="canonical" href="https://hacostock.github.io/">
 <link rel="alternate" hreflang="ja" href="https://hacostock.github.io/">
 <link rel="alternate" hreflang="en" href="https://hacostock.github.io/en/">
+<link rel="alternate" hreflang="x-default" href="https://hacostock.github.io/">
 <meta property="og:title" content="HacoStock — 写真で探せるコレクション管理">
 <meta property="og:description" content="写真を撮るだけでコレクション・在庫を整理。OCR が名前を自動入力、画像からタグを自動生成。">
 <meta property="og:image" content="https://hacostock.github.io/assets/images/app-icon.png">
+<meta property="og:url" content="https://hacostock.github.io/">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "HacoStock",
+  "description": "写真を撮るだけでコレクション・在庫を整理できる iOS / iPadOS / macOS アプリ。",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "iOS, iPadOS, macOS",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "JPY"
+  },
+  "url": "https://hacostock.github.io/",
+  "image": "https://hacostock.github.io/assets/images/app-icon.png"
+}
+</script>
 </head>
 <body>
 
@@ -24,10 +50,11 @@
       <span>HacoStock</span>
     </a>
     <nav class="site-nav">
+      <a href="#howto">使い方</a>
+      <a href="#scenarios">シーン</a>
       <a href="#features">特徴</a>
       <a href="#pricing">料金</a>
       <a href="support.html">サポート</a>
-      <a href="privacy.html">プライバシー</a>
       <a class="lang-switch" href="en/">EN</a>
     </nav>
   </div>
@@ -35,49 +62,127 @@
 
 <section class="hero">
   <div class="container">
-    <img class="icon" src="assets/images/app-icon.png" alt="HacoStock アイコン">
-    <h1>写真で探せる、<br>コレクション管理アプリ</h1>
-    <p class="tagline">フィギュア・本・雑貨。撮るだけで整理できる、シンプルなボックス型インベントリ。</p>
-    <div class="cta-group">
-      <a class="cta" href="#" aria-disabled="true">App Store（近日公開）</a>
-      <a class="cta secondary" href="#features">特徴を見る</a>
+    <div class="hero-text">
+      <div class="icon-wrap reveal reveal-1">
+        <img class="icon" src="assets/images/app-icon.png" alt="HacoStock アイコン">
+      </div>
+      <h1 class="reveal reveal-2">
+        撮るだけで整理する、<br>
+        <span class="accent">コレクション管理</span>
+      </h1>
+      <p class="tagline reveal reveal-3">
+        フィギュア・本・雑貨。カメラに収めるだけで、OCR が名前を読み取り、AI がタグを生成。ボックスに入れるように、暮らしを整える。
+      </p>
+      <div class="cta-group reveal reveal-3">
+        <a class="cta" role="button" aria-disabled="true">App Store（近日公開）</a>
+        <a class="cta secondary" href="#features">特徴を見る</a>
+      </div>
+    </div>
+    <div class="hero-mock reveal reveal-2">
+      <img class="phone-mock" src="assets/images/screenshots/hero.svg" alt="アプリ画面のプレビュー">
+    </div>
+  </div>
+</section>
+
+<section id="howto" class="howto">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">How it works</span>
+      <h2 class="section-title">3 ステップで、収集が記録に変わる</h2>
+      <p class="section-lead">手入力ゼロ。撮って、しまって、探す。それだけ。</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <img class="step-mock" src="assets/images/screenshots/step-snap.svg" alt="撮影画面">
+        <h3>撮る</h3>
+        <p>カメラで撮影するだけ。OCR が名前を自動で読み取り、画像からタグを生成します。</p>
+      </div>
+      <div class="step">
+        <img class="step-mock" src="assets/images/screenshots/step-store.svg" alt="ボックス一覧画面">
+        <h3>しまう</h3>
+        <p>「ボックス」に入れて整理。棚・コレクション・カテゴリなど呼び名は自由に変更できます。</p>
+      </div>
+      <div class="step">
+        <img class="step-mock" src="assets/images/screenshots/step-search.svg" alt="検索結果画面">
+        <h3>探す</h3>
+        <p>タグ・キーワード・お気に入りで瞬時に検索。販売中・売却済みのフィルターにも対応。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="scenarios" class="scenarios">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">Scenarios</span>
+      <h2 class="section-title">こんな時、HacoStock が効く</h2>
+      <p class="section-lead">「あの商品どこだっけ？」を、これからゼロに。</p>
+    </div>
+    <div class="scenario-list">
+      <article class="scenario">
+        <div class="scenario-num">01</div>
+        <div class="scenario-body">
+          <h3>フリマで売れた、あれどこだっけ？</h3>
+          <p class="scenario-quote">フィギュアが売れた！…って、あの箱、どこに入れたっけ。押し入れの奥？引き出しの中？</p>
+          <p class="scenario-solution">出品写真を見ながらサムネイル一覧から探したり、画像から生成されたタグで絞り込み。<strong>どのボックスにあるか</strong>すぐ分かる。発送後はワンタップで「売却済み」に切り替え。</p>
+        </div>
+      </article>
+      <article class="scenario">
+        <div class="scenario-num">02</div>
+        <div class="scenario-body">
+          <h3>店で「これ、もう持ってたっけ？」</h3>
+          <p class="scenario-quote">気になるフィギュアを見つけた。でも、似たやつ、家にあった気がする…。</p>
+          <p class="scenario-solution">タグやキーワードで一覧から即検索。<strong>二重買いを防げる</strong>から、コレクションがダブらない。</p>
+        </div>
+      </article>
+      <article class="scenario">
+        <div class="scenario-num">03</div>
+        <div class="scenario-body">
+          <h3>引越し前、何をどこに詰めた？</h3>
+          <p class="scenario-quote">段ボールにまとめて入れた。けど、後から「あの本どこ？」となるのが目に見えてる。</p>
+          <p class="scenario-solution">ボックスごとにまとめて撮影しておけば、<strong>箱を開けずに中身が分かる</strong>。引越し後の発掘作業ゼロ。</p>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
 <section id="features" class="features">
   <div class="container">
-    <h2>主な特徴</h2>
+    <div class="section-head">
+      <span class="section-eyebrow">Features</span>
+      <h2 class="section-title">毎日の整理を、もっと軽やかに</h2>
+    </div>
     <div class="feature-grid">
       <div class="feature">
-        <span class="emoji">📷</span>
-        <h3>写真を撮るだけで登録</h3>
-        <p>カメラで撮影するだけで自動登録。OCR がアイテムの名前を自動で読み取り、タグも画像から自動生成します。</p>
+        <span class="icon-badge">📷</span>
+        <h3>写真から自動登録</h3>
+        <p>撮影だけで名前を OCR、タグを画像認識で自動生成。手入力ゼロで登録できます。</p>
       </div>
       <div class="feature">
-        <span class="emoji">📦</span>
+        <span class="icon-badge">📦</span>
         <h3>ボックスで整理</h3>
-        <p>「棚」「コレクション」「カテゴリ」など、呼び名は自由。自分のスタイルに合わせて整理できます。</p>
+        <p>「棚」「コレクション」「カテゴリ」など、自分のスタイルに合わせて呼び方を変えられます。</p>
       </div>
       <div class="feature">
-        <span class="emoji">🔍</span>
+        <span class="icon-badge">🔍</span>
         <h3>すばやく探せる検索</h3>
-        <p>タグ・キーワード・お気に入りで絞り込み。販売中・売却済みのフィルターで大量アイテムも瞬時に。</p>
+        <p>タグ・キーワード・お気に入りで絞り込み。大量アイテムも瞬時に見つかります。</p>
       </div>
       <div class="feature">
-        <span class="emoji">💰</span>
+        <span class="icon-badge">💰</span>
         <h3>売却管理</h3>
-        <p>アイテムごとに「販売中」「売却済み」を管理。フリマアプリと併用した出品記録に最適。</p>
+        <p>「販売中」「売却済み」を管理。フリマアプリと併用した出品記録に最適。</p>
       </div>
       <div class="feature">
-        <span class="emoji">🎨</span>
+        <span class="icon-badge">🎨</span>
         <h3>美しいデザイン</h3>
         <p>5 種類のカラーテーマとグラスモーフィズム UI。眺めるだけでも楽しい。</p>
       </div>
       <div class="feature">
-        <span class="emoji">🔒</span>
+        <span class="icon-badge">🔒</span>
         <h3>プライバシー重視</h3>
-        <p>全データは端末内に保存。アカウント登録不要、外部送信なし。</p>
+        <p>アカウント不要、データは端末に保存。複数端末で使いたい場合は iCloud 同期 (オプトイン) も今後対応予定。</p>
       </div>
     </div>
   </div>
@@ -85,11 +190,15 @@
 
 <section id="pricing" class="pricing">
   <div class="container">
-    <h2>料金</h2>
-    <p class="lead">無料で始めて、必要になったら一度の購入で無制限に。サブスクリプションはありません。</p>
+    <div class="section-head">
+      <span class="section-eyebrow">Pricing</span>
+      <h2 class="section-title">サブスクなし、買い切り</h2>
+      <p class="section-lead">無料で始めて、必要になったら一度だけ。ずっと使えます。</p>
+    </div>
     <div class="plan-grid">
       <div class="plan">
         <h3>無料</h3>
+        <p class="plan-sub">まずはお試しに</p>
         <div class="price">¥0</div>
         <ul>
           <li>3 ボックスまで</li>
@@ -99,11 +208,13 @@
       </div>
       <div class="plan pro">
         <h3>Pro</h3>
-        <div class="price">買い切り</div>
+        <p class="plan-sub">本格的に整理したい方へ</p>
+        <div class="price">買い切り <small>/ 一度の購入</small></div>
         <ul>
           <li>ボックス無制限</li>
           <li>アイテム無制限</li>
           <li>サブスクリプションなし</li>
+          <li>今後のアップデートも対応</li>
         </ul>
       </div>
     </div>

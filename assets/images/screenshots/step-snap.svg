@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 680" fill="none" role="img" aria-label="Camera capture screen placeholder">
+  <defs>
+    <linearGradient id="bezel-a" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a2a2c"/>
+      <stop offset="1" stop-color="#0e0e10"/>
+    </linearGradient>
+    <radialGradient id="viewfinder" cx="0.5" cy="0.45" r="0.7">
+      <stop offset="0" stop-color="#222226"/>
+      <stop offset="1" stop-color="#0c0c0e"/>
+    </radialGradient>
+    <linearGradient id="accent-a" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff8a5f"/>
+      <stop offset="1" stop-color="#ffb088"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="320" height="680" rx="44" fill="url(#bezel-a)"/>
+  <rect x="3" y="3" width="314" height="674" rx="41" fill="none" stroke="rgba(255,255,255,0.06)"/>
+  <rect x="10" y="10" width="300" height="660" rx="36" fill="#0a0a0c"/>
+
+  <rect x="130" y="22" width="60" height="20" rx="10" fill="#000"/>
+  <text x="32" y="36" fill="#f5f5f7" font-family="-apple-system, sans-serif" font-size="11" font-weight="600">9:41</text>
+
+  <!-- Top bar -->
+  <text x="160" y="74" text-anchor="middle" fill="#f5f5f7" font-family="-apple-system, sans-serif" font-size="13" font-weight="600">撮影</text>
+  <text x="32" y="74" fill="#ff8a5f" font-family="-apple-system, sans-serif" font-size="13" font-weight="500">閉じる</text>
+
+  <!-- Viewfinder -->
+  <rect x="24" y="100" width="272" height="380" rx="18" fill="url(#viewfinder)"/>
+
+  <!-- Subject silhouette (figurine) -->
+  <g opacity="0.55" transform="translate(160,290)">
+    <ellipse cx="0" cy="56" rx="58" ry="14" fill="rgba(255,255,255,0.04)"/>
+    <path d="M -28,40 Q -36,-10 -20,-50 Q -10,-70 0,-70 Q 10,-70 20,-50 Q 36,-10 28,40 Z" fill="rgba(255,255,255,0.10)"/>
+    <circle cx="0" cy="-58" r="20" fill="rgba(255,255,255,0.14)"/>
+  </g>
+
+  <!-- OCR detection overlay -->
+  <g>
+    <rect x="78" y="184" width="164" height="40" rx="6" fill="none" stroke="#ff8a5f" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <rect x="78" y="226" width="120" height="14" rx="3" fill="rgba(255,138,95,0.18)" stroke="#ff8a5f" stroke-width="1" stroke-dasharray="3 2"/>
+  </g>
+
+  <!-- Detected text card -->
+  <g transform="translate(40,396)">
+    <rect width="240" height="62" rx="14" fill="rgba(20,20,22,0.85)" stroke="rgba(255,255,255,0.08)" stroke-width="0.6"/>
+    <circle cx="22" cy="31" r="10" fill="url(#accent-a)"/>
+    <path d="M 18,31 L 21,34 L 27,28" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="42" y="27" fill="#f5f5f7" font-family="-apple-system, sans-serif" font-size="11" font-weight="600">文字を認識しました</text>
+    <rect x="42" y="34" width="140" height="6" rx="3" fill="rgba(255,255,255,0.22)"/>
+    <rect x="42" y="44" width="100" height="5" rx="2.5" fill="rgba(255,255,255,0.10)"/>
+  </g>
+
+  <!-- Capture controls -->
+  <g transform="translate(160,560)">
+    <!-- Switch camera -->
+    <circle cx="-90" cy="0" r="20" fill="rgba(255,255,255,0.06)"/>
+    <circle cx="-90" cy="0" r="8" stroke="#f5f5f7" stroke-width="1.2" fill="none"/>
+    <!-- Shutter -->
+    <circle cx="0" cy="0" r="32" stroke="#f5f5f7" stroke-width="2" fill="none"/>
+    <circle cx="0" cy="0" r="26" fill="#f5f5f7"/>
+    <!-- Gallery -->
+    <rect x="74" y="-16" width="32" height="32" rx="7" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.12)" stroke-width="0.6"/>
+    <rect x="78" y="-12" width="24" height="24" rx="4" fill="rgba(255,138,95,0.25)"/>
+  </g>
+
+  <!-- Mode picker -->
+  <g transform="translate(160,624)">
+    <text x="-44" y="0" fill="#86868b" font-family="-apple-system, sans-serif" font-size="11" font-weight="500">アルバム</text>
+    <text x="0" y="0" text-anchor="middle" fill="#ff8a5f" font-family="-apple-system, sans-serif" font-size="11" font-weight="700">撮影</text>
+    <text x="44" y="0" fill="#86868b" font-family="-apple-system, sans-serif" font-size="11" font-weight="500">OCR</text>
+  </g>
+</svg>

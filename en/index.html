@@ -5,15 +5,41 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HacoStock — Find Your Collection by Photo</title>
 <meta name="description" content="A photo-based collection & inventory app for iOS, iPadOS, and macOS. Auto-name with OCR, auto-tag from images.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0a0a0c" media="(prefers-color-scheme: dark)">
 <link rel="icon" type="image/png" href="../assets/images/app-icon.png">
 <link rel="apple-touch-icon" href="../assets/images/app-icon.png">
 <link rel="stylesheet" href="../assets/css/style.css">
+<link rel="canonical" href="https://hacostock.github.io/en/">
 <link rel="alternate" hreflang="ja" href="https://hacostock.github.io/">
 <link rel="alternate" hreflang="en" href="https://hacostock.github.io/en/">
+<link rel="alternate" hreflang="x-default" href="https://hacostock.github.io/">
 <meta property="og:title" content="HacoStock — Find Your Collection by Photo">
 <meta property="og:description" content="Organize your collection by taking photos. Auto-name with OCR, auto-tag from images, and track sales.">
 <meta property="og:image" content="https://hacostock.github.io/assets/images/app-icon.png">
+<meta property="og:url" content="https://hacostock.github.io/en/">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "HacoStock",
+  "description": "A photo-based collection & inventory app for iOS, iPadOS, and macOS.",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "iOS, iPadOS, macOS",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "url": "https://hacostock.github.io/en/",
+  "image": "https://hacostock.github.io/assets/images/app-icon.png"
+}
+</script>
 </head>
 <body>
 
@@ -24,10 +50,11 @@
       <span>HacoStock</span>
     </a>
     <nav class="site-nav">
+      <a href="#howto">How</a>
+      <a href="#scenarios">Stories</a>
       <a href="#features">Features</a>
       <a href="#pricing">Pricing</a>
       <a href="support.html">Support</a>
-      <a href="privacy.html">Privacy</a>
       <a class="lang-switch" href="../">JA</a>
     </nav>
   </div>
@@ -35,49 +62,127 @@
 
 <section class="hero">
   <div class="container">
-    <img class="icon" src="../assets/images/app-icon.png" alt="HacoStock icon">
-    <h1>Find your collection,<br>by photo.</h1>
-    <p class="tagline">Figures, books, everyday items — a simple box-based inventory that organizes itself from your camera.</p>
-    <div class="cta-group">
-      <a class="cta" href="#" aria-disabled="true">App Store (Coming Soon)</a>
-      <a class="cta secondary" href="#features">See Features</a>
+    <div class="hero-text">
+      <div class="icon-wrap reveal reveal-1">
+        <img class="icon" src="../assets/images/app-icon.png" alt="HacoStock icon">
+      </div>
+      <h1 class="reveal reveal-2">
+        Snap, sort,<br>
+        <span class="accent">find anything.</span>
+      </h1>
+      <p class="tagline reveal reveal-3">
+        Figures, books, everyday items. Point your camera — OCR reads the name, AI generates the tags. Drop it in a box, find it later.
+      </p>
+      <div class="cta-group reveal reveal-3">
+        <a class="cta" role="button" aria-disabled="true">App Store (Coming Soon)</a>
+        <a class="cta secondary" href="#features">See Features</a>
+      </div>
+    </div>
+    <div class="hero-mock reveal reveal-2">
+      <img class="phone-mock" src="../assets/images/screenshots/hero.svg" alt="App screen preview">
+    </div>
+  </div>
+</section>
+
+<section id="howto" class="howto">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">How it works</span>
+      <h2 class="section-title">Three steps. No typing.</h2>
+      <p class="section-lead">Snap, store, search. That's the whole flow.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <img class="step-mock" src="../assets/images/screenshots/step-snap.svg" alt="Camera capture screen">
+        <h3>Snap</h3>
+        <p>Take a photo. OCR reads the name automatically, and tags are generated from the image.</p>
+      </div>
+      <div class="step">
+        <img class="step-mock" src="../assets/images/screenshots/step-store.svg" alt="Box list screen">
+        <h3>Store</h3>
+        <p>Drop it in a "Box." Rename the concept to Shelf, Collection, Category — whatever fits.</p>
+      </div>
+      <div class="step">
+        <img class="step-mock" src="../assets/images/screenshots/step-search.svg" alt="Search results screen">
+        <h3>Search</h3>
+        <p>Find anything by tag, keyword, or favorite. Filter for-sale and sold items instantly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="scenarios" class="scenarios">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">Scenarios</span>
+      <h2 class="section-title">When HacoStock saves the day</h2>
+      <p class="section-lead">Turn every "where did I put that?" into "found it."</p>
+    </div>
+    <div class="scenario-list">
+      <article class="scenario">
+        <div class="scenario-num">01</div>
+        <div class="scenario-body">
+          <h3>Sold on a marketplace — wait, where is it?</h3>
+          <p class="scenario-quote">My figure just sold! …but which box did I put it in? Back of the closet? Drawer?</p>
+          <p class="scenario-solution">Match against the listing photo by scrolling the visual grid, or filter by the image-generated tags. <strong>See exactly which box</strong> it lives in. One tap marks it "Sold" after shipping.</p>
+        </div>
+      </article>
+      <article class="scenario">
+        <div class="scenario-num">02</div>
+        <div class="scenario-body">
+          <h3>"Wait, do I already own this?"</h3>
+          <p class="scenario-quote">Spotted something at the store. But I have a feeling something similar is already at home…</p>
+          <p class="scenario-solution">Check tags or keywords on the spot to <strong>avoid duplicate purchases</strong>. Your collection stays curated.</p>
+        </div>
+      </article>
+      <article class="scenario">
+        <div class="scenario-num">03</div>
+        <div class="scenario-body">
+          <h3>Moving day — what's in which box?</h3>
+          <p class="scenario-quote">Everything's packed away. I already know I'll be asking "where's that book?" in two weeks.</p>
+          <p class="scenario-solution">Photograph each box's contents and <strong>know what's inside without opening it</strong>. Skip the unboxing archeology.</p>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
 <section id="features" class="features">
   <div class="container">
-    <h2>Features</h2>
+    <div class="section-head">
+      <span class="section-eyebrow">Features</span>
+      <h2 class="section-title">Organize without the effort</h2>
+    </div>
     <div class="feature-grid">
       <div class="feature">
-        <span class="emoji">📷</span>
-        <h3>Register with a Photo</h3>
-        <p>Snap a photo to register an item instantly. OCR reads the name from the image, and tags are generated automatically.</p>
+        <span class="icon-badge">📷</span>
+        <h3>Auto-register from Photo</h3>
+        <p>OCR captures the name, image recognition generates tags. Zero manual entry.</p>
       </div>
       <div class="feature">
-        <span class="emoji">📦</span>
-        <h3>Organize with Boxes</h3>
-        <p>Group items into "Boxes." Rename them to "Shelf," "Collection," "Category" — whatever fits your style.</p>
+        <span class="icon-badge">📦</span>
+        <h3>Box-based Organization</h3>
+        <p>Rename "Box" to fit your style — Shelf, Collection, Category, anything goes.</p>
       </div>
       <div class="feature">
-        <span class="emoji">🔍</span>
-        <h3>Find Anything Fast</h3>
-        <p>Filter by tags, keywords, favorites, for-sale or sold status. Large collections stay easy to navigate.</p>
+        <span class="icon-badge">🔍</span>
+        <h3>Instant Search</h3>
+        <p>Filter by tag, keyword, or favorite. Large collections stay easy to navigate.</p>
       </div>
       <div class="feature">
-        <span class="emoji">💰</span>
-        <h3>Track Sales</h3>
-        <p>Mark each item as "For Sale" or "Sold." Great for resale listings across flea-market platforms.</p>
+        <span class="icon-badge">💰</span>
+        <h3>Sales Tracking</h3>
+        <p>Mark items "For Sale" or "Sold." Perfect alongside flea-market platforms.</p>
       </div>
       <div class="feature">
-        <span class="emoji">🎨</span>
-        <h3>Beautiful Design</h3>
-        <p>Five color themes with a glassmorphism UI. Enjoyable just to browse.</p>
+        <span class="icon-badge">🎨</span>
+        <h3>Beautiful UI</h3>
+        <p>Five color themes with a glassmorphism interface. A joy to browse.</p>
       </div>
       <div class="feature">
-        <span class="emoji">🔒</span>
+        <span class="icon-badge">🔒</span>
         <h3>Privacy First</h3>
-        <p>All data is stored on your device. No account required, nothing sent to external servers.</p>
+        <p>No account, data stays on your device. iCloud sync (opt-in) for multi-device use is planned for a future update.</p>
       </div>
     </div>
   </div>
@@ -85,11 +190,15 @@
 
 <section id="pricing" class="pricing">
   <div class="container">
-    <h2>Pricing</h2>
-    <p class="lead">Start free, upgrade once for unlimited use. No subscriptions, ever.</p>
+    <div class="section-head">
+      <span class="section-eyebrow">Pricing</span>
+      <h2 class="section-title">No subscriptions. Ever.</h2>
+      <p class="section-lead">Start free. Upgrade once when you need to. Yours forever.</p>
+    </div>
     <div class="plan-grid">
       <div class="plan">
         <h3>Free</h3>
+        <p class="plan-sub">Try it out</p>
         <div class="price">$0</div>
         <ul>
           <li>Up to 3 boxes</li>
@@ -99,11 +208,13 @@
       </div>
       <div class="plan pro">
         <h3>Pro</h3>
-        <div class="price">One-time</div>
+        <p class="plan-sub">For serious collectors</p>
+        <div class="price">One-time <small>/ purchase</small></div>
         <ul>
           <li>Unlimited boxes</li>
           <li>Unlimited items</li>
           <li>No subscription</li>
+          <li>Future updates included</li>
         </ul>
       </div>
     </div>
