@@ -223,6 +223,15 @@ body {
   .hero-grid { background-size: 38px 38px; opacity: 0.4; }
   /* keep the meta row centered with the (now centered) hero text */
   .hero-meta { justify-content: center; }
+  /* Break the headline only at the <wbr> points (after the 読点), not mid-word.
+     keep-all removes the automatic CJK break opportunities; overflow-wrap is a
+     safety net so a long run can still break rather than overflow. A slightly
+     smaller cap keeps each phrase on one tidy line. */
+  .hero h1 {
+    font-size: clamp(26px, 7.6vw, 42px);
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
 }
 
 /* ── Respect reduced motion ──────────────────────────────────────────── */
