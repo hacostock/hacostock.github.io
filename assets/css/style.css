@@ -209,6 +209,23 @@ a:hover { opacity: 0.75; }
   gap: 14px;
   flex-wrap: wrap;
 }
+.hero-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-soft);
+}
+.hero-meta .dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.6;
+}
 
 /* Hero mockup */
 .hero-mock {
@@ -500,8 +517,13 @@ section { position: relative; }
   border-radius: 14px;
   background: linear-gradient(135deg, var(--accent-soft), transparent);
   border: 1px solid var(--border);
-  font-size: 26px;
+  color: var(--accent);
   margin-bottom: 18px;
+}
+.feature .icon-badge svg {
+  width: 26px;
+  height: 26px;
+  display: block;
 }
 .feature h3 {
   font-size: 18px;
@@ -581,6 +603,11 @@ section { position: relative; }
   font-weight: 500;
   letter-spacing: 0;
   margin-top: 6px;
+}
+.plan .plan-note {
+  font-size: 12px;
+  color: var(--text-soft);
+  margin: -16px 0 22px;
 }
 .plan ul {
   list-style: none;

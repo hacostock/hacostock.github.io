@@ -1,0 +1,261 @@
+/* =====================================================================
+   HacoStock — Preview theme: "Dark × Scan / Glow" (direction A)
+   Loaded AFTER style.css. Overrides only; index.html is untouched.
+   Forces a dark, tech-forward palette regardless of system theme and
+   layers in a scan-line / neon-glow aesthetic around the existing markup.
+   ===================================================================== */
+
+:root {
+  --bg: #070912;
+  --bg-elev: #0e1220;
+  --surface: rgba(255, 255, 255, 0.035);
+  --surface-solid: #111626;
+  --text: #eef2fb;
+  --text-muted: #aab4cc;
+  --text-soft: #7c879e;
+  --accent: #ff7a45;
+  --accent-2: #ffb06b;
+  --accent-soft: rgba(255, 122, 69, 0.12);
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(120, 200, 255, 0.30);
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.5);
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.55);
+  --shadow-lg: 0 28px 70px rgba(255, 122, 69, 0.28);
+  /* scan beam */
+  --scan: #48e2ff;
+  --scan-soft: rgba(72, 226, 255, 0.12);
+}
+
+/* ── Page base: deep navy with twin radial auras ─────────────────────── */
+body {
+  background:
+    radial-gradient(1100px 560px at 72% -8%, rgba(255, 122, 69, 0.12), transparent 60%),
+    radial-gradient(900px 520px at 8% 6%, rgba(72, 226, 255, 0.08), transparent 62%),
+    var(--bg);
+  color: var(--text);
+}
+
+/* ── Header ───────────────────────────────────────────────────────────── */
+.site-header {
+  background: color-mix(in srgb, var(--bg) 72%, transparent);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.site-header .brand img { box-shadow: 0 0 0 1px rgba(72, 226, 255, 0.18); }
+.lang-switch { border-color: var(--border-strong); }
+
+/* ── Hero overlays: perspective grid + sweeping scan beam ─────────────── */
+.hero { background: transparent; }
+.hero::before {                       /* warm aura behind headline */
+  background: radial-gradient(ellipse at center, var(--accent) 0%, transparent 60%);
+  opacity: 0.22;
+}
+.hero-grid,
+.hero-scan {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(120, 200, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(120, 200, 255, 0.07) 1px, transparent 1px);
+  background-size: 46px 46px;
+  -webkit-mask-image: radial-gradient(125% 85% at 50% 0%, #000 28%, transparent 76%);
+  mask-image: radial-gradient(125% 85% at 50% 0%, #000 28%, transparent 76%);
+  opacity: 0.55;
+}
+.hero-scan {
+  overflow: hidden;
+  /* faint, ever-present digital scanlines (fine horizontal ruling) */
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(180, 220, 255, 0.022) 0,
+    rgba(180, 220, 255, 0.022) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  -webkit-mask-image: radial-gradient(125% 88% at 50% 0%, #000 22%, transparent 82%);
+  mask-image: radial-gradient(125% 88% at 50% 0%, #000 22%, transparent 82%);
+}
+/* A slim band of animated digital noise that sweeps down — the "scan". */
+.hero-scan::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.34  0 0 0 0 0.78  0 0 0 0 0.96  0 0 0 0.9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 140px 140px;
+  opacity: 0.16;
+  mix-blend-mode: screen;
+  /* reveal the noise only inside a soft ~150px band, then move that band down */
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 45%, #000 55%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000 45%, #000 55%, transparent);
+  -webkit-mask-size: 100% 150px;
+  mask-size: 100% 150px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: 0 -160px;
+  mask-position: 0 -160px;
+  animation: heroScan 6.5s linear infinite, heroNoise 0.9s steps(4) infinite;
+}
+/* band travels top → bottom */
+@keyframes heroScan {
+  0%   { -webkit-mask-position: 0 -160px; mask-position: 0 -160px; }
+  100% { -webkit-mask-position: 0 125%;   mask-position: 0 125%; }
+}
+/* tiny grain jitter so the noise shimmers rather than sits still */
+@keyframes heroNoise {
+  0%   { background-position: 0 0; }
+  25%  { background-position: -7px 5px; }
+  50%  { background-position: 4px -6px; }
+  75%  { background-position: -5px -4px; }
+  100% { background-position: 6px 7px; }
+}
+
+/* App icon: cooler glow */
+.hero .icon-wrap::after {
+  background: linear-gradient(135deg, var(--accent), var(--scan));
+  opacity: 0.45;
+}
+.hero img.icon { box-shadow: var(--shadow-lg), 0 0 0 1px rgba(72, 226, 255, 0.18); }
+
+/* Headline accent gets a soft neon bloom */
+.hero h1 .accent { filter: drop-shadow(0 0 20px rgba(255, 122, 69, 0.38)); }
+
+/* ── Buttons ─────────────────────────────────────────────────────────── */
+.cta {
+  box-shadow: 0 10px 34px rgba(255, 122, 69, 0.38);
+}
+.cta:hover { box-shadow: 0 14px 42px rgba(255, 122, 69, 0.5); }
+.cta.secondary {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  border: 1px solid var(--border-strong);
+  box-shadow: inset 0 0 0 1px rgba(72, 226, 255, 0.10);
+}
+.cta.secondary:hover {
+  box-shadow: inset 0 0 0 1px rgba(72, 226, 255, 0.25), 0 0 26px rgba(72, 226, 255, 0.18);
+}
+
+/* ── Phone mock: cool rim light ──────────────────────────────────────── */
+.hero-mock::before {
+  background: linear-gradient(135deg, var(--accent), var(--scan));
+  opacity: 0.20;
+}
+.phone-mock {
+  filter: drop-shadow(0 30px 70px rgba(0, 0, 0, 0.6));
+  box-shadow: 0 0 0 1px rgba(72, 226, 255, 0.10);
+}
+
+/* Straighten the device — sit square to the viewer, keep only a gentle float.
+   style.css bakes rotate(-2deg) into its @keyframes float, so we need a
+   rotation-free keyframe rather than just a transform override. */
+.hero-mock .phone-mock {
+  transform: translateY(0);
+  animation: floatStraight 6s ease-in-out infinite;
+}
+.hero-mock:hover .phone-mock {
+  transform: translateY(-6px);
+  animation-play-state: paused;
+}
+@keyframes floatStraight {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+
+/* ── Section eyebrows glow cyan ──────────────────────────────────────── */
+.section-eyebrow {
+  color: var(--scan);
+  text-shadow: 0 0 18px rgba(72, 226, 255, 0.4);
+}
+
+/* ── Cards: glass + luminous hover edge ──────────────────────────────── */
+.step,
+.scenario,
+.feature,
+.plan {
+  background: var(--surface);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+.feature:hover,
+.scenario:hover {
+  border-color: rgba(72, 226, 255, 0.38);
+  box-shadow:
+    0 18px 50px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(72, 226, 255, 0.22),
+    0 0 34px rgba(72, 226, 255, 0.12);
+}
+
+.feature .icon-badge {
+  background: linear-gradient(135deg, rgba(255, 122, 69, 0.18), transparent);
+  border: 1px solid rgba(72, 226, 255, 0.22);
+  box-shadow: 0 0 22px rgba(255, 122, 69, 0.12), inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+}
+
+.step .step-mock,
+.scenario-num { box-shadow: 0 6px 22px rgba(255, 122, 69, 0.28), 0 0 24px rgba(72, 226, 255, 0.10); }
+
+.scenario-quote {
+  background: rgba(72, 226, 255, 0.06);
+  border: 1px solid rgba(72, 226, 255, 0.12);
+}
+.scenario-quote::before { background: rgba(72, 226, 255, 0.06); }
+
+/* ── Pricing: Pro plan as the glowing hero card ──────────────────────── */
+.plan.pro {
+  background: linear-gradient(180deg, rgba(255, 122, 69, 0.10), var(--surface-solid));
+  border: 1px solid rgba(255, 122, 69, 0.30);
+  box-shadow: 0 0 0 1px rgba(255, 122, 69, 0.12), 0 24px 60px rgba(255, 122, 69, 0.14);
+}
+.plan.pro::before {
+  background: var(--bg-elev);
+  border-color: var(--accent);
+  box-shadow: 0 0 18px rgba(255, 122, 69, 0.4);
+}
+
+/* ── Footer ──────────────────────────────────────────────────────────── */
+.site-footer { border-top: 1px solid rgba(255, 255, 255, 0.06); }
+
+/* ── Mobile hero fix: lead with the headline, shrink the phone ───────── */
+@media (max-width: 880px) {
+  .hero-mock { display: none; }                /* hide the hero device on mobile */
+  .hero-grid { background-size: 38px 38px; opacity: 0.4; }
+  /* keep the meta row centered with the (now centered) hero text */
+  .hero-meta { justify-content: center; }
+}
+
+/* ── Respect reduced motion ──────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .hero-scan::after { animation: none; opacity: 0; }
+}
+
+/* ── Small "preview" ribbon ──────────────────────────────────────────── */
+.preview-flag {
+  position: fixed;
+  right: 14px;
+  bottom: 14px;
+  z-index: 200;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text);
+  background: rgba(17, 22, 38, 0.82);
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45), 0 0 20px rgba(72, 226, 255, 0.12);
+}
+.preview-flag .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--scan);
+  box-shadow: 0 0 10px var(--scan);
+}
+.preview-flag a { color: var(--scan); font-weight: 600; }
