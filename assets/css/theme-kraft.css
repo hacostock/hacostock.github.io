@@ -1,0 +1,352 @@
+/* =====================================================================
+   HacoStock — Preview theme: "Kraft / Minimal" (direction C)
+   Loaded AFTER style.css. Overrides only; index.html is untouched.
+   A warm, paper/cardboard-inspired minimal look: kraft off-white,
+   charcoal text, a single warm-orange accent, restrained label/tape
+   motifs and generous whitespace. Reads as a calm, trustworthy tool.
+   ===================================================================== */
+
+:root {
+  --bg: #f4efe6;            /* warm kraft paper */
+  --bg-elev: #fbf8f2;
+  --surface: #fdfbf6;
+  --surface-solid: #fdfbf6;
+  --text: #2e2a25;          /* warm charcoal */
+  --text-muted: #6f665a;
+  --text-soft: #9b9285;
+  --accent: #ff6b35;        /* app orange — the single accent */
+  --accent-2: #e8884a;
+  --accent-soft: #f8e7d8;
+  --border: rgba(60, 50, 40, 0.12);
+  --border-strong: rgba(60, 50, 40, 0.22);
+  --radius-sm: 12px;
+  --radius: 16px;
+  --radius-lg: 24px;
+  --shadow-sm: 0 2px 8px rgba(70, 55, 40, 0.08);
+  --shadow: 0 14px 34px rgba(70, 55, 40, 0.12);
+  --shadow-lg: 0 22px 50px rgba(70, 55, 40, 0.16);
+  /* paper/cardboard accents */
+  --kraft: #cdb088;
+  --kraft-deep: #b08d5f;
+  --ink: #9e3a2a;          /* stamp ink — a second accent, used sparingly */
+  --tape: rgba(228, 210, 176, 0.85);
+  --tape-edge: rgba(150, 125, 90, 0.30);
+}
+
+/* Force the warm/light look even when the OS is in dark mode. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #f4efe6;
+    --bg-elev: #fbf8f2;
+    --surface: #fdfbf6;
+    --surface-solid: #fdfbf6;
+    --text: #2e2a25;
+    --text-muted: #6f665a;
+    --text-soft: #9b9285;
+  }
+}
+
+/* ── Page base: kraft paper with a faint fibre grain ─────────────────── */
+body {
+  background:
+    /* very subtle paper fibre */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.42  0 0 0 0 0.34  0 0 0 0 0.22  0 0 0 0.5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23p)'/%3E%3C/svg%3E"),
+    radial-gradient(900px 540px at 80% -6%, rgba(255, 107, 53, 0.06), transparent 60%),
+    var(--bg);
+  background-size: 180px 180px, auto, auto;
+  background-blend-mode: multiply, normal, normal;
+  color: var(--text);
+}
+/* keep the grain quiet */
+body { position: relative; }
+
+/* ── Header ───────────────────────────────────────────────────────────── */
+.site-header {
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.site-header .brand img { box-shadow: 0 4px 12px rgba(70, 55, 40, 0.18); }
+.site-nav a { color: var(--text-muted); }
+.site-nav a:hover { color: var(--accent); }
+.lang-switch {
+  border: 1px solid var(--border-strong);
+  color: var(--text);
+  background: transparent;
+}
+
+/* ── Hero ─────────────────────────────────────────────────────────────── */
+.hero { background: transparent; }
+.hero::before {                       /* soft warm aura behind headline */
+  background: radial-gradient(ellipse at center, var(--accent) 0%, transparent 60%);
+  opacity: 0.10;
+}
+.hero .container { position: relative; z-index: 1; }
+
+/* App icon: warm soft shadow, no neon */
+.hero .icon-wrap::after {
+  background: linear-gradient(135deg, var(--accent), var(--kraft));
+  opacity: 0.28;
+}
+.hero img.icon { box-shadow: var(--shadow-lg); }
+
+/* Headline accent: flat warm orange, gentle */
+.hero h1 .accent {
+  color: var(--accent);
+  filter: none;
+}
+
+/* Headline line-breaking: only break at intended points (<wbr>/<br>),
+   never inside a word, and honour Japanese kinsoku (no small kana / 」
+   stranded at a line start). */
+.hero h1 {
+  line-break: strict;
+  word-break: keep-all;
+}
+.hero h1 .nb { white-space: nowrap; }
+
+/* ── Buttons: clean, tactile, single accent ──────────────────────────── */
+.cta {
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(255, 107, 53, 0.26);
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.cta:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(255, 107, 53, 0.34); }
+.cta.secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1.5px solid var(--border-strong);
+  box-shadow: none;
+}
+.cta.secondary:hover { background: rgba(60, 50, 40, 0.04); box-shadow: none; }
+
+/* App Store badge — an intentional "coming soon" element, not a dead button.
+   Solid warm charcoal (the classic store-badge silhouette), full opacity,
+   default cursor. Reads as a deliberate placeholder, never as broken. */
+.cta.cta-store {
+  background: var(--text);
+  color: #fbf8f2;
+  padding: 11px 24px 11px 22px;
+  gap: 11px;
+  box-shadow: 0 10px 24px rgba(46, 42, 37, 0.22);
+  cursor: default;
+  opacity: 1;
+}
+.cta.cta-store:hover { transform: none; box-shadow: 0 10px 24px rgba(46, 42, 37, 0.22); }
+.cta-store-glyph {
+  width: 26px;
+  height: 26px;
+  flex: 0 0 auto;
+}
+.cta-store-label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.05;
+  text-align: left;
+}
+.cta-store-label small {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  opacity: 0.78;
+}
+.cta-store-label strong {
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* ── Phone mock: a strip of masking tape at the top corner ───────────── */
+.hero-mock { position: relative; }
+.hero-mock::before {
+  background: linear-gradient(135deg, var(--accent), var(--kraft));
+  opacity: 0.14;
+}
+.phone-mock { filter: drop-shadow(0 22px 44px rgba(70, 55, 40, 0.22)); }
+
+/* ── Section eyebrows: a kraft "label tag" ───────────────────────────── */
+.section-eyebrow {
+  display: inline-block;
+  color: var(--text);
+  background: var(--kraft);
+  background-image: linear-gradient(180deg, rgba(255,255,255,0.18), transparent);
+  padding: 5px 14px 5px 22px;
+  border-radius: 4px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+/* punched hole on the tag */
+.section-eyebrow::before {
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--bg);
+  box-shadow: inset 0 0 0 1px rgba(60,50,40,0.25);
+}
+
+/* ── Cards: warm paper, thin border, soft lift ───────────────────────── */
+.step,
+.scenario,
+.feature,
+.plan {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s ease;
+}
+.feature:hover,
+.scenario:hover,
+.step:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow);
+}
+
+/* A small piece of masking tape pinning each step screenshot. */
+.step { position: relative; }
+.step .step-mock { position: relative; }
+.step::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  width: 92px;
+  height: 22px;
+  transform: translateX(-50%) rotate(-3deg);
+  background: var(--tape);
+  border-left: 1px dashed var(--tape-edge);
+  border-right: 1px dashed var(--tape-edge);
+  box-shadow: 0 1px 3px rgba(70,55,40,0.12);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Feature icon badges: kraft tile, orange glyph. */
+.feature .icon-badge {
+  border-radius: 12px;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid rgba(255, 107, 53, 0.18);
+  box-shadow: none;
+}
+.feature .icon-badge svg { stroke: var(--accent); }
+
+/* Step thumbnails & scenario numbers: quiet, warm. */
+.step .step-mock { box-shadow: var(--shadow-sm); border-radius: 36px; }
+/* Scenario marker = a rubber-stamp in "ink" (a second, quieter color than the
+   orange action accent). The glyph names the situation (売/店/庫), so the marker
+   carries meaning instead of a decorative 01/02/03 sequence. */
+.scenario-num {
+  background: transparent;
+  color: var(--ink, #9e3a2a);
+  border: 2px solid var(--ink, #9e3a2a);
+  box-shadow: none;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  transform: rotate(-4deg);
+  opacity: 0.92;
+}
+.scenario-quote {
+  background: rgba(60, 50, 40, 0.04);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+/* Drop the speech-bubble diamond notch — quieter, less "decorated". */
+.scenario-quote::before { display: none; }
+.scenario-solution strong { color: var(--accent); }
+
+/* ── Pricing: Pro plan with a kraft "recommended" tag ────────────────── */
+.plan.pro {
+  background: linear-gradient(180deg, var(--accent-soft), var(--surface));
+  border: 1.5px solid rgba(255, 107, 53, 0.30);
+  box-shadow: var(--shadow);
+}
+.plan.pro::before {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  box-shadow: 0 6px 14px rgba(255, 107, 53, 0.30);
+}
+.price { color: var(--accent); }
+
+/* ── Footer ──────────────────────────────────────────────────────────── */
+.site-footer {
+  border-top: 1px solid var(--border);
+  background: color-mix(in srgb, var(--kraft) 14%, transparent);
+}
+
+/* ── Mobile hero ─────────────────────────────────────────────────────── */
+@media (max-width: 880px) {
+  /* Keep the device duo visible at tablet / iPad widths (it sits above the
+     copy via `order: -1`); only the smallest phones drop it (below). */
+  .hero-meta { justify-content: center; }
+  .hero h1 {
+    font-size: clamp(24px, 7.2vw, 42px);
+    word-break: keep-all;
+    overflow-wrap: normal;
+  }
+}
+
+/* ── Small "preview" ribbon ──────────────────────────────────────────── */
+.preview-flag {
+  position: fixed;
+  right: 14px;
+  bottom: 14px;
+  z-index: 200;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--text);
+  background: var(--kraft);
+  border-radius: 4px;
+  box-shadow: var(--shadow);
+}
+.preview-flag .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.preview-flag a { color: var(--accent); font-weight: 800; text-decoration: underline; }
+
+/* ── Section rhythm: alternate kraft / warm-white bands ───────────────
+   The page was one flat kraft field top-to-bottom, so it read as static.
+   Now the bands alternate kraft(hero) → white(3ステップ) → kraft(シーン)
+   → white(特徴) → kraft(料金) → white(FAQ) → kraft(CTA). On the white
+   bands the cards flip to kraft — the mirror image of white-on-kraft —
+   so the paper motif still carries the rhythm instead of disappearing. */
+.howto,
+.features,
+.faq {
+  background: #fffdf9;
+  position: relative;
+  z-index: 0;
+}
+.howto .step,
+.features .feature,
+.faq .faq-item {
+  background: #f3ecdf;
+  border-color: rgba(60, 50, 40, 0.10);
+}
+/* A hairline seam where a white band meets the kraft body, so the change
+   reads as intentional rather than a rendering gap. */
+.howto,
+.features,
+.faq {
+  border-top: 1px solid rgba(60, 50, 40, 0.06);
+  border-bottom: 1px solid rgba(60, 50, 40, 0.06);
+}

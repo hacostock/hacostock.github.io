@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HacoStock — Find Your Collection by Photo</title>
+<meta name="description" content="Sold something on a marketplace, but which box is it in? Search with the listing photo and get the box number instantly. Snap-to-catalog inventory for collectors and sellers. For iOS and iPadOS; macOS coming soon.">
+<meta name="theme-color" content="#ece5d6">
+<link rel="icon" type="image/png" href="../assets/images/app-icon.png">
+<link rel="apple-touch-icon" href="../assets/images/app-icon.png">
+<link rel="stylesheet" href="../assets/css/style.css?v=24">
+<link rel="stylesheet" href="../assets/css/theme-kraft.css?v=19">
+<link rel="canonical" href="https://hacostock.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://hacostock.github.io/">
+<link rel="alternate" hreflang="en" href="https://hacostock.github.io/en/">
+<link rel="alternate" hreflang="x-default" href="https://hacostock.github.io/">
+<meta property="og:title" content="HacoStock — Find Your Collection by Photo">
+<meta property="og:description" content="Sold it? Find the right box. Search with the listing photo and HacoStock tells you which box the item is in — no typing, no digging.">
+<meta property="og:image" content="https://hacostock.github.io/assets/images/app-icon.png">
+<meta property="og:url" content="https://hacostock.github.io/en/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "HacoStock",
+  "description": "A photo-based collection & inventory app for iOS and iPadOS.",
+  "applicationCategory": "ProductivityApplication",
+  "operatingSystem": "iOS, iPadOS",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "url": "https://hacostock.github.io/en/",
+  "image": "https://hacostock.github.io/assets/images/app-icon.png"
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="./">
+      <img src="../assets/images/app-icon.png" alt="HacoStock">
+      <span>HacoStock</span>
+    </a>
+    <nav class="site-nav">
+      <a href="#howto">How</a>
+      <a href="#scenarios">Stories</a>
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="support.html">Support</a>
+      <a class="lang-switch" href="../">JA</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <canvas class="hero-canvas" aria-hidden="true"></canvas>
+  <div class="container">
+    <div class="hero-text">
+      <div class="icon-wrap reveal reveal-1">
+        <img class="icon" src="../assets/images/app-icon.png" alt="HacoStock icon">
+      </div>
+      <h1 class="reveal reveal-2">
+        “Where did I put that?”<br>
+        <span class="accent">Solved by photo search.</span>
+      </h1>
+      <p class="tagline reveal reveal-3">
+        Figures, books, everyday items. Snap them in, sort, then search by photo — point at any image and the app finds the match for you. Any item in seconds, even when you have a lot.
+      </p>
+      <div class="cta-group reveal reveal-3">
+        <a href="https://apps.apple.com/app/hacostock/id6787472068" class="cta cta-store" aria-label="Open HacoStock on the App Store">
+          <svg class="cta-store-glyph" viewBox="0 0 384 512" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/>
+          </svg>
+          <span class="cta-store-label">
+            <strong>App Store</strong>
+          </span>
+        </a>
+        <a class="cta secondary" href="#features">See Features</a>
+      </div>
+      <p class="hero-meta reveal reveal-3">
+        <span>For iPhone &amp; iPad · Mac coming soon</span>
+        <span class="dot"></span>
+        <span>Free to start · One-time Pro</span>
+      </p>
+    </div>
+    <div class="hero-mock reveal reveal-2">
+      <div class="device-duo">
+        <div class="tablet-stack">
+          <img class="tablet-mock" src="../assets/images/screenshots-kraft/hero-ipad-1.jpg?v=14" alt="iPad: collection grid">
+          <img class="tablet-mock" src="../assets/images/screenshots-kraft/hero-ipad-2.jpg?v=14" alt="iPad: item detail">
+          <img class="tablet-mock" src="../assets/images/screenshots-kraft/hero-ipad-3.jpg?v=14" alt="iPad: list view">
+        </div>
+        <div class="phone-wrap">
+          <img class="phone-mock" src="../assets/images/screenshots-kraft/hero.jpg?v=19" alt="iPhone: collection grid">
+          <span class="phone-fx" aria-hidden="true"></span>
+          <span class="found-tag" aria-hidden="true">
+            <span class="tag-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></span>
+            <span>Found in <b>Box 3</b></span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="howto" class="howto">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">How it works</span>
+      <h2 class="section-title">Lots of boxes, searchable in seconds.</h2>
+      <p class="section-lead">Snap, sort, search by photo. Three steps replace 30 minutes of digging.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <img class="step-mock" src="../assets/images/screenshots-kraft/step-snap.jpg?v=18" alt="Camera capture screen">
+        <h3>Snap</h3>
+        <p>Just point and shoot. Image recognition adds tags automatically — and OCR also suggests names when there's printed text. Even 100+ items take only seconds each.</p>
+      </div>
+      <div class="step">
+        <img class="step-mock" src="../assets/images/screenshots-kraft/step-store.jpg?v=19" alt="Box list screen">
+        <h3>Sort</h3>
+        <p>Every box gets an auto-assigned number. Write the same number on the physical box, and you'll know what's inside from the app — without opening it.</p>
+      </div>
+      <div class="step">
+        <img class="step-mock" src="../assets/images/screenshots-kraft/step-search.jpg?v=19" alt="Search results screen">
+        <h3>Find</h3>
+        <p>Search by photo: point at a listing photo or any image, and the app pulls up matching items automatically. Or filter by image tags. Find any item even when you have a lot — in seconds.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="scenarios" class="scenarios">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">Scenarios</span>
+      <h2 class="section-title">When HacoStock saves the day</h2>
+      <p class="section-lead">Turn every "where did I put that?" into "found it."</p>
+    </div>
+    <div class="scenario-list">
+      <article class="scenario">
+        <div class="scenario-num" aria-hidden="true">SOLD</div>
+        <div class="scenario-body">
+          <h3>Sold on a marketplace — wait, where is it?</h3>
+          <p class="scenario-quote">My figure just sold! …but which box did I put it in? Open dozens of cardboard boxes one by one?</p>
+          <p class="scenario-solution">Just search with the listing photo — the app finds the matching item for you, automatically. <strong>30 minutes of digging becomes a few seconds</strong> — "Box 3" and you're done. One tap marks it "Sold" after shipping.</p>
+        </div>
+      </article>
+      <article class="scenario">
+        <div class="scenario-num" aria-hidden="true">OWN?</div>
+        <div class="scenario-body">
+          <h3>"Wait, do I already own this?"</h3>
+          <p class="scenario-quote">Spotted something at the store. But I have a feeling something similar is already at home…</p>
+          <p class="scenario-solution">Check tags or keywords on the spot to <strong>avoid duplicate purchases</strong>. Your collection stays curated.</p>
+        </div>
+      </article>
+      <article class="scenario">
+        <div class="scenario-num" aria-hidden="true">BOX</div>
+        <div class="scenario-body">
+          <h3>Know what's in the box — without opening it</h3>
+          <p class="scenario-quote">Boxes piled in storage. Marker labels like "books" or "misc" only get you so far — you end up opening every one anyway.</p>
+          <p class="scenario-solution">Every box in HacoStock gets an <strong>auto-assigned number</strong>. Write the same number on the cardboard box, and physical meets digital. Tap "Box 3" in the app to see exactly what's inside. Perfect for storage, moving, or off-site units.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="concept" aria-label="Concept">
+  <div class="container">
+    <div class="concept-copy">
+      <span class="concept-eyebrow">WHY IT WORKS</span>
+      <h2>Dozens of boxes.<br><span class="accent">Found without opening one.</span></h2>
+      <p>Write a number on each real box. Search by photo and you'll see which box it's in — no more opening carton after carton to check.</p>
+    </div>
+  </div>
+</section>
+
+<section id="features" class="features">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">Features</span>
+      <h2 class="section-title">Organize without the effort</h2>
+    </div>
+    <div class="feature-grid">
+      <div class="feature">
+        <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg></span>
+        <h3>Search by photo, find instantly</h3>
+        <p>Search by image — just point at a listing photo or any picture, and the app finds matching items automatically. Filter by tags or keywords too. Any item, instantly — even when you have a lot.</p>
+      </div>
+      <div class="feature">
+        <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7.5 12 3l9 4.5v9L12 21 3 16.5z"/><path d="M3 7.5 12 12l9-4.5"/><path d="M12 12v9"/></svg></span>
+        <h3>Auto-numbered Boxes</h3>
+        <p>Every box gets a number automatically. Write the same number on the physical box or shelf, and each one links straight to the app. Rename "Box" to Shelf, Collection — whatever fits.</p>
+      </div>
+      <div class="feature">
+        <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9a2 2 0 0 1 2-2h1.5l1.2-2h6.6l1.2 2H19a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="12" cy="13" r="3.4"/></svg></span>
+        <h3>Just Snap to Register</h3>
+        <p>Image recognition generates tags automatically. From 10 items to 200, just press the shutter. OCR also suggests names when there's printed text on packaging or covers.</p>
+      </div>
+      <div class="feature">
+        <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.6 3H4.5A1.5 1.5 0 0 0 3 4.5v8.1a1.5 1.5 0 0 0 .44 1.06l7.9 7.9a1.5 1.5 0 0 0 2.12 0l7.18-7.18a1.5 1.5 0 0 0 0-2.12l-7.9-7.9A1.5 1.5 0 0 0 12.6 3z"/><circle cx="7.8" cy="7.8" r="1.4"/></svg></span>
+        <h3>Sales Tracking</h3>
+        <p>Mark items "For Sale" or "Sold." Perfect alongside flea-market platforms.</p>
+      </div>
+      <div class="feature">
+        <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l1.7 4.6 4.6 1.7-4.6 1.7L12 16.1l-1.7-4.6L5.7 9.8l4.6-1.7z"/><path d="M18.2 14.8l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z"/></svg></span>
+        <h3>Beautiful UI</h3>
+        <p>Six color themes with a glass interface. So pleasant you'll actually keep organizing.</p>
+      </div>
+      <div class="feature">
+        <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></svg></span>
+        <h3>Privacy First</h3>
+        <p>No account, data stays on your device. iCloud sync (opt-in, Pro) is available for multi-device use.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="pricing">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">Pricing</span>
+      <h2 class="section-title">No subscriptions. Ever.</h2>
+      <p class="section-lead">Start free. Upgrade once when you need to. Yours forever.</p>
+    </div>
+    <div class="plan-grid">
+      <div class="plan">
+        <h3>Free</h3>
+        <p class="plan-sub">Try it out</p>
+        <div class="price">$0</div>
+        <ul>
+          <li>Try every feature free</li>
+          <li>Plenty of room: 50 items, 3 boxes</li>
+          <li>Upgrade once if you love it</li>
+        </ul>
+      </div>
+      <div class="plan pro">
+        <h3>Pro</h3>
+        <p class="plan-sub">For serious collectors</p>
+        <div class="price">$3.99 <small>one-time</small></div>
+        <p class="plan-note"><span class="price-was">Usually $6.99</span><span class="price-tag">Launch offer</span></p>
+        <ul>
+          <li>Unlimited boxes &amp; items</li>
+          <li>iCloud sync — one collection across iPhone and iPad (Mac coming soon)</li>
+          <li>ZIP export for backup and hand-off</li>
+          <li>No subscription, future updates included</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="faq">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">FAQ</span>
+      <h2 class="section-title">Frequently asked questions</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Where is my data stored?</summary>
+        <p>Everything stays on your device. No account needed — your photos and item data are never sent to an external server. Image analysis and similarity search run entirely on-device. If you want multiple devices, Pro’s opt-in iCloud sync keeps them in step through your own iCloud.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What happens when I switch devices?</summary>
+        <p>Pro gives you two ways: turn on iCloud sync and just sign in on the new device, or export your items and photos as a single ZIP file and import it — no cloud required.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do sold items disappear?</summary>
+        <p>No. They're simply marked as sold and stay in your records. You can toggle their visibility, which makes the app handy as a sales log too.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Which devices are supported?</summary>
+        <p>iPhone and iPad, with the Mac version coming soon. With Pro’s iCloud sync, every device opens the same collection.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="cta-bottom">
+  <div class="container">
+    <h2 class="section-title">Make "where did I put it?" a thing of the past.</h2>
+    <p class="section-lead">Now available on the App Store. Free to download.</p>
+    <div class="cta-group">
+      <a href="https://apps.apple.com/app/hacostock/id6787472068" class="cta cta-store" aria-label="Open HacoStock on the App Store">
+          <svg class="cta-store-glyph" viewBox="0 0 384 512" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/>
+          </svg>
+          <span class="cta-store-label">
+            <strong>App Store</strong>
+          </span>
+        </a>
+      <a class="cta secondary" href="#howto">See how it works</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <nav>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="../">日本語</a>
+    </nav>
+    <p>© 2026 HacoStock</p>
+  </div>
+</footer>
+
+<script type="importmap">
+{ "imports": { "three": "../assets/js/vendor/three.module.js" } }
+</script>
+<script type="module" src="../assets/js/hero-bg-kraft.js"></script>
+<script src="../assets/js/scroll-anim.js?v=2" defer></script>
+
+</body>
+</html>
